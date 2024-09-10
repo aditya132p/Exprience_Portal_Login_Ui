@@ -1,10 +1,8 @@
-
-import Login from './Containers/Login'
+import  Routes  from "./Routes/index"
 
 function App() {
   return (
-    
-    <Login/>
+  <Routes />
   )
 }
 
