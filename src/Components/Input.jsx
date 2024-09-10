@@ -2,7 +2,7 @@ import React from 'react'
 
 function Input() {
   return (
-    <div>Input</div>
+    <input type={props.type} className={props.style} required placeholder={props.placeholder} />
   )
 }
 
