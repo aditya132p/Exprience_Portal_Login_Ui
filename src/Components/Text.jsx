@@ -1,6 +1,6 @@
 const Text = (props) => {
     return (
-        <h1 className={props.style}>
+        <h1 {...props}>
             {props.children}
         </h1>
     )
