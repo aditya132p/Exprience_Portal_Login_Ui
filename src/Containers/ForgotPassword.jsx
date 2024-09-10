@@ -1,5 +1,9 @@
 import { ArrowRight,BadgeCheck } from 'lucide-react'
+
 import React, { useState } from 'react'
+import Input from '../Components/Input'
+import Button from '../Components/Button'
+import Text from '../Components/Text'
 
 
 function ForgotPassword() {
@@ -21,24 +25,24 @@ function ForgotPassword() {
         {!isSubmitted ? (
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
-              <input
+              <Input
                 type="email"
                 placeholder="Enter your email"
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-3 border rounded-lg"
+                className="w-full border px-2 outline-none py-2 rounded-md border-gray-200"
               />
               {/* {error && <p className="text-red-500 text-sm mt-1">{error}</p>} */}
             </div>
-            <button type="submit" className="w-full bg-black p-3 rounded-lg flex items-center justify-center text-white">
+            <Button type="submit" className="flex items-center justify-center  py-3 rounded-md w-full bg-black text-white hover:bg-gray-900">
               Next <ArrowRight className="ml-2 h-4 w-4" />
-            </button>
+            </Button>
           </form>
         ) : (
           <div className="text-center">
             {/* <div className="mx-auto h-12 w-12 text-green-500 mb-4" /> */}
             <BadgeCheck className="mx-auto h-12 w-12 text-green-500 mb-4"/>
-            <p className="text-lg font-semibold">Check your registered email</p>
-            <p className="text-gray-600">We've sent a link to reset your password.</p>
+            <Text className="text-lg font-semibold">Check your registered email</Text>
+            <Text className="text-gray-600">We've sent a link to reset your password.</Text>
           </div>
         )}
       </div>

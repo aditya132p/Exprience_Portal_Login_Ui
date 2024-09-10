@@ -1,8 +1,8 @@
-import React from 'react'
 
-function Input() {
+function Input(props) {
   return (
-    <input type={props.type} className={props.style} required placeholder={props.placeholder} />
+    // <input id={props.id} type={props.type} className={props.style} required placeholder={props.placeholder} />
+    <input {...props} />
   )
 }
 
