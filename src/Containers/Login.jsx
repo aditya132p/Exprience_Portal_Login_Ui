@@ -1,9 +1,9 @@
-import Button from "../Components/Button";
-import Text from "../Components/Text";
-import Img from "../Components/Img";
-import Input from "../Components/Input";
+import Button from "../Components/Common/Button";
+import Text from "../Components/Common/Text";
+import Img from "../Components/Common/Img";
+import Input from "../Components/Common/Input";
 import { Link } from "react-router-dom";
-import Card from "../Components/Card";
+import Card from "../Components/Common/Card";
 // import { motion } from "framer-motion";
 
 
