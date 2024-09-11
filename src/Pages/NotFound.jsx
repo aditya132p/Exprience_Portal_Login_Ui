@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from "framer-motion"
-import Button from '../Components/Button'
+import Button from '../Components/Common/Button'
 import { Link } from 'react-router-dom'
 export const NotFound = () => {
   return (
