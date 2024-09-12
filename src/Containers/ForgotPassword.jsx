@@ -37,7 +37,7 @@ function ForgotPassword() {
                   type="text"
                   placeholder="Enter your email"
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full border px-2 outline-none py-2 rounded-md border-gray-200"
+                  className={`w-full border px-2 outline-none py-2 rounded-md border-gray-200 ${error&& 'border-red-500'}`}
                 />
                 {error && (
                   <p className="text-red-500 text-left text-sm mt-1">{error}</p>

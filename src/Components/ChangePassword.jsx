@@ -4,7 +4,7 @@ import Text from './Common/Text'
 import Input from './Common/Input'
 import { motion } from "framer-motion";
 import Button from './Common/Button'
-import { ArrowRight, BadgeCheck, Eye, EyeOff } from 'lucide-react'
+import { ArrowRight, BadgeCheck } from 'lucide-react'
 import Loading from './Common/Loading';
 
 
@@ -14,7 +14,7 @@ function ChangePassword() {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState('')
-  const [showPassword, setShowPassword] = useState(false)
+
 
   const handleSubmit = (e) => {
     setLoading(true)
@@ -42,10 +42,6 @@ function ChangePassword() {
     }, 1000)
   }
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword)
-  }
-
 
   return (
     <>
@@ -60,33 +56,22 @@ function ChangePassword() {
               <div className="mb-4">
                 <div className="relative">
                   <Input
-                    type={showPassword ? "text" : "password"}
-                    // type={"text"}
+                    type="password"
                     placeholder="Enter new password"
                     value={newPassword}
                     onChange={(e) => setNewPassword(e.target.value)}
-                    className="w-full border px-2 outline-none py-2 rounded-md border-gray-200"
+                      className={`w-full border px-2 outline-none py-2 rounded-md border-gray-200 ${error&& 'border-red-500'}`}
                   />
-                  <button
-                    type="button"
-                    onClick={togglePasswordVisibility}
-                    className="absolute inset-y-0 right-0 pr-3 flex items-center"
-                  >
-                    {showPassword ? (
-                     <EyeOff className="h-5 w-5 text-gray-400" />
-                     ) : ( 
-                      <Eye className="h-5 w-5 text-gray-400" />
-                     )} 
-                  </button>
+                  
                 </div>
               </div>
               <div className="mb-4">
                 <Input
-                  type={showPassword ? "text" : "password"}
+                  type= "password"
                   placeholder="Confirm new password"
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="w-full border px-2 outline-none py-2 rounded-md border-gray-200"
+                    className={`w-full border px-2 outline-none py-2 rounded-md border-gray-200 ${error && 'border-red-500'}`}
                 />
               </div>
               {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
